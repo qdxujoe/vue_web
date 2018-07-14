@@ -5,12 +5,25 @@ import App from './App'
 import Vuex from 'vuex'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import 'mui/dist/css/mui.css'
+import 'mui/examples/hello-mui/css/icons-extra.css'
+
+// vant
+import Vant from 'vant';
+import 'vant/lib/vant-css/index.css';
+Vue.use(Vant);
+
 // 路由实例
 import router from './router'
-
 //导入与vue无关的第三方包
 import 'normalize.css'
-import { axios } from "axios"
+import axios from "axios"
+
+
+Vue.prototype.$http = axios
+// axios.defaults.baseURL="http://dayue.mrants.net/DaYueCity"
+axios.defaults.baseURL="http://hhhh.mobi"
+axios.defaults.withCredentials=true; //跨域请求设置这个
 
 // 根组件
 // import App from './App'
