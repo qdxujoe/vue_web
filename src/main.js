@@ -3,15 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import Vuex from 'vuex'
-import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import 'mui/dist/css/mui.css'
 import 'mui/examples/hello-mui/css/icons-extra.css'
-
+import MintUI from 'mint-ui'
 // vant
 import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';
 Vue.use(Vant);
+
+//引入过滤器
+import './js/filter';
+
 
 // 路由实例
 import router from './router'

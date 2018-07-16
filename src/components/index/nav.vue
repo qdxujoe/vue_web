@@ -3,10 +3,10 @@
 		<div class="mui-content">
 			<ul class="mui-table-view mui-grid-view mui-grid-9">
 			<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-2">
-				<a href="#">
+				<router-link to="/news/list">
 					<span class="mui-icon mui-icon-home"></span>
 					<div class="mui-media-body">天猫</div>
-				</a>
+				</router-link>
 			</li>
 			<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-2">
 				<a href="#">
@@ -82,8 +82,6 @@ export default {};
 	// margin-top:2.1875rem /* 35/16 */;
 	width: 100%;
 	height: 12.5rem /* 200/16 */;
-
-	
 margin: 0 auto;
 	.mui-content{
 		width: 100%;

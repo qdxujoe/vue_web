@@ -12,7 +12,7 @@
 
       <!-- 搜索框 -->
       <van-col span="6" class="seek">
-        <div>
+        <div @click="sousuo">
           <!-- 图标 -->
           <van-icon name="search" />
           <span>ins超火的连衣裙</span>
@@ -40,6 +40,9 @@ export default {
    methods: {
     onRead(file) {
       console.log(file)
+    },
+    sousuo(){
+      this.$router.push('https://www.jianshu.com/p/7994176fbcc4');
     }
   }
 };

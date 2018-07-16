@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import config from '../../js/api-comfig.js'
 export default {
   data() {
     return {
@@ -21,9 +22,10 @@ export default {
   methods: {
     //获取数据
     getList() {
-      let url = "/sysImg/getMainPageSysImg/0/5";
+      let url=config.swipe;
+      // let url = "/sysImg/getMainPageSysImg/0/5";
       this.$http.get(url).then(res => {
-        console.log(res);
+        // console.log(res);
         // if (res.data.status == 200) {
           this.list = res.data.data;
       });
