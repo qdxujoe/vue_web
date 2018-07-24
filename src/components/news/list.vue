@@ -17,7 +17,7 @@
 					</router-link>
 				</li>
 			</ul> -->
-
+ 
 			<v-title :title="title"></v-title>
       <ul class="mui-table-view">
 				<li class="mui-table-view-cell mui-media">

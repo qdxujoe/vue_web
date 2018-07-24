@@ -7,6 +7,7 @@ import 'mint-ui/lib/style.css'
 import 'mui/dist/css/mui.css'
 import 'mui/examples/hello-mui/css/icons-extra.css'
 import MintUI from 'mint-ui'
+// import './assets/icon/iconfont.css';
 // vant
 import Vant from 'vant';
 import 'vant/lib/vant-css/index.css';

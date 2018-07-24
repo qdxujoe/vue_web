@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import "./assets/icon/iconfont.js";
 import header from './components/home/header.vue'
 import footer from './components/home/footer.vue'
 export default {
