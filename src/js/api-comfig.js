@@ -12,4 +12,7 @@ export default{
   photoCategoryList:domain +"",                            //图片分类
   photoTamges:domain +'',                                 //图片缩略图
   photoDetails:domain +'',                                //图片详情
+
+  goodsList:domain+'',                                    //商品列表
+  goodsDetails:domain+''                                  //商品详情
 }

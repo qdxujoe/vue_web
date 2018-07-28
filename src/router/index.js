@@ -6,7 +6,12 @@ import details from '../components/news/details.vue'
 //导入图片
 import Plist from '../components/photo/list.vue'
 import Pdetails from '../components/photo/details.vue'
+//导入商品详情
+import GList from '../components/goods/list.vue'
+import Gdetails from '../components/goods/details.vue'
 Vue.use(Router)
+
+
 
 export default new Router({
   routes: [
@@ -47,6 +52,19 @@ export default new Router({
       path: '/photo/details',
       name: 'Pdetails',
       component: Pdetails
+    },
+    {
+      //商品购买列表
+      path: '/goods/list',
+      name: 'GList',
+      component: GList
+    },
+    {
+      //商品购买详情
+      // path: '/goods/details/:id',
+      path: '/goods/details',
+      name: 'Gdetails',
+      component: Gdetails
     },
   
   ]

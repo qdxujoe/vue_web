@@ -16,6 +16,9 @@ Vue.use(Vant);
 //引入过滤器
 import './js/filter';
 
+//导入图片预览插件
+import ImgPreview from './plugin/img_preview_install';
+Vue.use(ImgPreview);
 
 // 路由实例
 import router from './router'

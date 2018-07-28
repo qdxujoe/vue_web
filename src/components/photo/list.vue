@@ -6,6 +6,10 @@
       <!-- <li class="mui-table-view-cell" v-for="item in categoryList" :key="item.id">Item 2</li> -->
       <li class="mui-table-view-cell">
         <!-- <router-link :to="/'photo/list/'+item.id"> -->
+
+        <!-- 以下是路由跳转用name跳转的写法 -->
+        <!-- <router-link :to="{name:'Plist',params:{id:item.id}}"></router-link> -->
+
           <!-- {{item.title}} -->
           tab
         <!-- </router-link> -->
@@ -14,8 +18,17 @@
     </ul>
 
     <!-- 图片列表 -->
-    <!-- <div class="mui-card" v-for="item in photoList" :key="item.id">
-      <div class="mui-card-header mui-card-media" :style="getstyle(item)"></div>
+   <!-- 
+      <div class="mui-card" v-for="item in photoList" :key="item.id">
+        <router-link to="'/photo/details/' +item.id">
+
+        //:style="getstyle(item)"-》这是背景，注掉不用背景的方法，用回图片懒加载
+          <div class="mui-card-header mui-card-media" :style="getstyle(item)">
+             
+            图片懒加载加上->v-lazy="图片地址"
+            <img v-lazy=""/>  
+          </div> 
+        </router-link> 
       <div class="mui-card-content">
         <div class="mui-card-content-inner">
           <p>Posted on January 18, 2016</p>
@@ -23,9 +36,12 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
+  -->
   <div class="mui-card">
-      <div class="mui-card-header mui-card-media"></div>
+    <router-link to="/photo/details/">
+      <div class="mui-card-header mui-card-media"  style="height:40vw;background-image:url(../images/cbd.jpg)">></div>
+     </router-link> 
       <div class="mui-card-content">
         <div class="mui-card-content-inner">
           <p>Posted on January 18, 2016</p>
@@ -80,15 +96,14 @@ export default {
 
           // 第2种方法
           // this.photoList = body.message.map(function(photo, i) {
-            // photo.img_url ='//'+photo.img_url 
-            // photo.img_url = `../../img(${i % 20 + 1}).jpg`;
+            // photo.img_url ='url'+photo.img_url 
   //           return photo;
   //         });
   //       }
   //     });
   //   }
   // },
-  //获取背景style
+  //获取背景style——》后来发现用背景不太好改成图片（因为需要懒加载）
   // getstyle(item) {
   //   return"height:40vw;background-image:url(" + item.img_url + ")";
   // },
