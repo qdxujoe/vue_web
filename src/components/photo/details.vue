@@ -65,9 +65,9 @@ export default {
     };
   },
   methods: {
-    //获取数据
+    //获取图片详情数据
     getInfo() {
-      let url = comfig.url + this.$router.params.id;
+      let url = comfig.photoInfo + this.$router.params.id;
       this.$http.get(url).then(res => {
         let body = res.body;
         body.status == 200 && (this.info = body.message[0]);
@@ -75,7 +75,7 @@ export default {
     },
     //获取缩略图
     getHums() {
-      let url = comfig.url + this.$router.params.id;
+      let url = comfig.photoHums + this.$router.params.id;
       this.$http.get(url).then(res => {
         let body = res.body;
         if(body.status==0){

@@ -38,32 +38,33 @@
 </template>
 
 <script>
-// import config from '../../js/api-comfig.js'
+import config from '../../js/api-comfig.js'
 import title from '../commpon/title.vue';
   export default {
     data(){
       return{
 				title:'新闻咨询',
-        // list:[]
+        list:[]
       }
 		},
 		components:{
 			'v-title':title
 		},
     methods:{
-      // getList(){
-      //   let url="";
-      //   this.$http.get(url).then(res=>{
-      //     console.log(res);
-      //   res.data.status==200 &&(this.list==res.data.data)
+      getList(){
+        let url=config.newsList
+        // let url='/flash/classify/queryFlashClassify'
+        this.$http.post(url).then(res=>{
+          console.log(res);
+        res.data.status==200 &&(this.list==res.data.data)
 
         
           
-        // })
-      // }
+        })
+      }
     },
     created(){
-    //   this.getList();
+      this.getList();
      }
   }
 </script>

@@ -25,7 +25,7 @@ import Ccomment from '../../components/commpon/comment.vue'
     methods:{
       // 根据id获取对应的新闻详情
       getDetails(){
-        // let url=config.newsDetails +this.$router.params.id ;
+        // let url=config.newsDetails +this.$route.params.id ;
         // this.$http.get(url).then(res=>{
         //   console.log(res);
         //   res.body.status ===200 && (this.Details=res.body.message[0]);

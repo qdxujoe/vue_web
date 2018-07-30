@@ -55,7 +55,7 @@ import title from '../../components/commpon/title.vue'
     //       let body=res.body;
     //       // 加载更多
     //       if(body.status==0 && body.message.lenght >0){
-    //           this.list.push(...bosy.message);
+    //           this.list.push(...body.message);
     //           this.pageindex;
     //       }
     //       //如果是最后一页数据了，那么把按钮禁止掉

@@ -1,4 +1,5 @@
 <template>
+<!-- 首页轮播图 -->
   <div class="swipe">
     <mt-swipe :auto="4000">
       <mt-swipe-item  v-for="item in list" :key="item.id">
@@ -22,7 +23,7 @@ export default {
   methods: {
     //获取数据
     getList() {
-      let url=config.swipe;
+      let url=config.swipe
       // let url = "/sysImg/getMainPageSysImg/0/5";
       this.$http.get(url).then(res => {
         // console.log(res);
